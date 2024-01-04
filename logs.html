@@ -10,10 +10,40 @@
   <title>Pet</title>
   <link rel="stylesheet" href="styles/reset.css" />
   <link rel="stylesheet" href="styles/style.css" />
+  <script src="js/logs.js" type="module" defer></script>
 </head>
 
 <body>
-  <h1>Pet name</h1>
+
+
+  <header class="navbar">
+    <nav class="container navbar__container">
+      <a href="index.html" class="navbar__logo">VET BEE</a>
+      <ul class="navbar__menu">
+        <li class="navbar__item"><a href="index.html" class="navbar__link">Home</a></li>
+        <li class="navbar__item"><a href="add-pet.html" class="navbar__link">Add Pet</a></li>
+        <li class="navbar__item"><a href="pets.html" class="navbar__link">Pets</a></li>
+        <li class="navbar__item"><a href="meds.html" class="navbar__link">Meds</a></li>
+      </ul>
+    </nav>
+  </header>
+  <div class="container">
+    <h1 id="pets-name"> name : Health Records</h1>
+
+    <ul id="med-list" class="unlisted grid">
+      <li class="card">
+        <p><small>Log</small></p>
+        <h3 class="card-tile">title</h3>
+        <p class="card-text">description</p>
+      </li>
+      <li class="card">
+        <p><small>Prescription</small></p>
+        <h3 class="card-tile">name</h3>
+        <p class="card-date"><i>timestamp</i></p>
+        <p class="card-text">comment</p>
+      </li>
+    </ul>
+  </div>
 </body>
 
 </html>

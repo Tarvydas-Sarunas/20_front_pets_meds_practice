@@ -1,0 +1,106 @@
+:root {
+  --main-color: coral;
+}
+
+.unlisted {
+  list-style: none;
+  padding-left: 0;
+}
+
+.btn {
+  border: none;
+  background-color: transparent;
+  font-size: 1rem;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
+    'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  cursor: pointer;
+  /* primary styles */
+  border: 1px solid var(--main-color);
+  color: white;
+  border-radius: 5px;
+  text-transform: uppercase;
+  display: inline-block;
+  padding: 0.5em 1em;
+  background-color: var(--main-color);
+}
+
+.btn-secondary {
+  color: var(--main-color);
+  background-color: white;
+}
+
+.flex {
+  display: flex;
+  gap: 10px;
+}
+
+.between {
+  align-items: center;
+  justify-content: space-between;
+}
+
+.center {
+  align-items: center;
+  justify-content: center;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+}
+
+.card {
+  border: 1px solid #c3c3c3;
+  padding: 15px;
+  text-align: center;
+}
+
+.pet-name {
+  font-weight: normal;
+  font-size: 28px;
+}
+
+.pet-date {
+  margin-bottom: 0;
+}
+
+/* Navbar styles */
+.navbar {
+  background-color: #f2f2f2;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid rgb(176, 176, 176);
+  margin-bottom: 30px;
+}
+
+.navbar__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar__logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  text-decoration: none;
+}
+
+.navbar__menu {
+  list-style: none;
+  display: flex;
+}
+
+.navbar__item {
+  margin-right: 10px;
+}
+
+.navbar__link {
+  color: #333;
+  text-decoration: none;
+}
+
+.navbar__link.active {
+  font-weight: bold;
+}

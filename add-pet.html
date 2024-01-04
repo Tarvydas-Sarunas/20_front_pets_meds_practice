@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VET BEE</title>
+  <link rel="stylesheet" href="styles/reset.css" />
+  <link rel="stylesheet" href="styles/style.css" />
+  <script src="js/add-pet.js" type="module"></script>
+
+  <style>
+    /* Add custom styles for the form */
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: block;
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+
+    input[type="text"],
+    input[type="date"],
+    input[type="email"] {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 16px;
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <header class="navbar">
+    <nav class="container navbar__container">
+      <a href="index.html" class="navbar__logo">VET BEE</a>
+      <ul class="navbar__menu">
+        <li class="navbar__item"><a href="index.html" class="navbar__link">Home</a></li>
+        <li class="navbar__item"><a href="add-pet.html" class="navbar__link active">Add Pet</a></li>
+        <li class="navbar__item"><a href="pets.html" class="navbar__link">Pets</a></li>
+        <li class="navbar__item"><a href="meds.html" class="navbar__link">Meds</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="container">
+    <div class="flex between">
+      <h1>Add pet</h1>
+      <a href="index.html" class="btn ">Go back to pets</a>
+    </div>
+
+    <form>
+      <div class="form-group">
+        <label for="name">Pet name</label>
+        <input type="text" name="name" id="name" placeholder="Buddy" value="Maggie" />
+      </div>
+      <div class="form-group">
+        <label for="dob">Pet date of birth</label>
+        <input type="date" name="dob" id="dob" value="2019-01-01" />
+      </div>
+      <div class="form-group">
+        <label for="clientEmail">Client email</label>
+        <input type="email" name="clientEmail" value="magie@magie.com" id="clientEmail" placeholder="email@email.com">
+      </div>
+      <button type="submit" class="btn btn-primary">Add pet</button>
+    </form>
+  </div>
+</body>
+
+</html>

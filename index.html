@@ -4,58 +4,64 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <!-- Title Icon -->
-  <link rel="icon" type="image/x-icon" href="/img/icon code academi.png">
-  <!-- Title Icon -->
-  <title>All pets</title>
+  <title>VET BEE</title>
   <link rel="stylesheet" href="styles/reset.css" />
   <link rel="stylesheet" href="styles/style.css" />
-  <script src="js/index.js" defer type="module"></script>
+  <script defer src="js/index.js" type="module"></script>
 </head>
 
 <body>
+
+  <header>
+    <header class="navbar">
+      <nav class="container navbar__container">
+        <a href="index.html" class="navbar__logo">VET BEE</a>
+        <ul class="navbar__menu">
+          <li class="navbar__item"><a href="index.html" class="navbar__link active">Home</a></li>
+          <li class="navbar__item"><a href="add-pet.html" class="navbar__link ">Add Pet</a></li>
+          <li class="navbar__item"><a href="pets.html" class="navbar__link">Pets</a></li>
+          <li class="navbar__item"><a href="meds.html" class="navbar__link">Meds</a></li>
+        </ul>
+      </nav>
+    </header>
+  </header>
+
   <div class="container">
     <div class="flex between">
-      <h1>All pets</h1>
-      <a href="" class="btn btn-primery">Add pet</a>
+      <h1>Pet list</h1>
+      <a href="#" class="btn btn-primary">Add pet</a>
     </div>
-    <ul id="pets-list" class="unlisted">
-      <!-- one pet -->
+    <ul id="pets-list" class="unlisted grid">
       <li class="card">
         <h3 class="pet-name">Pet name</h3>
         <p class="pet-date">pet dob</p>
         <p class="pet-email">email</p>
         <div class="flex center">
-          <a href="#" class="btn-primery btn">Wiew logs</a>
-          <button href="#" class="btn-primery btn">Wiew logs</button>
+          <a href="logs.html?petId=1" class="btn">View logs</a>
+          <button class="btn btn-secondary">Delete</button>
         </div>
       </li>
-      <!-- end one pet -->
-      <!-- one pet -->
       <li class="card">
         <h3 class="pet-name">Pet name</h3>
         <p class="pet-date">pet dob</p>
         <p class="pet-email">email</p>
         <div class="flex center">
-          <a href="#" class="btn-primery btn">Wiew logs</a>
-          <button href="#" class="btn-primery btn">Wiew logs</button>
+          <a href="logs.html?petId=2" class="btn btn-primary">View logs</a>
+          <button class="btn btn-primary">Delete</button>
         </div>
       </li>
-      <!-- end one pet -->
-      <!-- one pet -->
       <li class="card">
         <h3 class="pet-name">Pet name</h3>
         <p class="pet-date">pet dob</p>
         <p class="pet-email">email</p>
         <div class="flex center">
-          <a href="#" class="btn-primery btn">Wiew logs</a>
-          <button href="#" class="btn-primery btn">Wiew logs</button>
+          <a href="#" class="btn btn-primary">View logs</a>
+          <button class="btn btn-primary">Delete</button>
         </div>
       </li>
-      <!-- end one pet -->
 
     </ul>
-  </div> <!-- container -->
+  </div><!-- container -->
 </body>
 
 </html>
