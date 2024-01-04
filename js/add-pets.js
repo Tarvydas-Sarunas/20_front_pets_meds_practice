@@ -7,6 +7,8 @@ const els = {
   clientEmail: document.getElementById('clientEmail'),
 };
 
+els.form.addEventListener('submit', createPet);
+
 function createPet(event) {
   event.preventDefault();
   console.log('form submitted');
@@ -24,9 +26,18 @@ function createPet(event) {
     },
     body: JSON.stringify(petObj),
   })
-    .then((resp) => resp.json())
-    .then((data) => {
-      console.log('data ===', data);
+    .then((resp) => {
+      if (resp.status === 201) {
+        window.location = 'index.html';
+      } else {
+        return resp.json();
+      }
+    })
+    .then((errors) => {
+      console.log('data ===', errors);
+      if (errors && errors.length > 0) {
+        isInvalid(errors);
+      }
       // redirect to logs.html?petId=2
       // window.location = 'index.html';
     })
@@ -51,3 +62,31 @@ const errArr = [
 // tikrina meds laukus ar geri atsiusti
 
 // tikrina logs laukus ar geri atsiusti
+
+function isInvalid(errorArr) {
+  // Supprimer les messages d'erreur existants
+  clearErrorMessages();
+
+  errorArr.forEach((erObj) => {
+    const divEl = document.createElement('div');
+    divEl.classList.add('invalid-feedback');
+    divEl.textContent = `Field ${erObj.field}: ${erObj.error}`;
+
+    if (erObj.field === 'pets_name') {
+      els.name.classList.add('is-invalid');
+      els.name.after(divEl);
+    } else if (erObj.field === 'client_email') {
+      els.clientEmail.classList.add('is-invalid');
+      els.clientEmail.after(divEl);
+    }
+  });
+}
+
+function clearErrorMessages() {
+  // Supprimer les messages d'erreur existants
+  const existingErrorMessages = document.querySelectorAll('.invalid-feedback');
+  existingErrorMessages.forEach((element) => element.remove());
+  // Supprimer la classe 'is-invalid' des champs de saisie
+  els.name.classList.remove('is-invalid');
+  els.clientEmail.classList.remove('is-invalid');
+}

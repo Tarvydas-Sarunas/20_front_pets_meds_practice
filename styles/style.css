@@ -104,3 +104,10 @@
 .navbar__link.active {
   font-weight: bold;
 }
+.invalid-feedback {
+  color: red;
+}
+.is-invalid {
+  background-color: rgb(233, 167, 167);
+  border: 1px solid #f30606;
+}
